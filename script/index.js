@@ -118,13 +118,26 @@ const totalCopy = document.getElementById('total-copy')
 
 const copyButton = document.getElementsByClassName('copy-btn');
 
+const numberText = document.getElementsByClassName('number');
+
+
 
 for (let copy of copyButton) {
    copy.addEventListener('click', function () {
       const quantity = document.getElementById('total-copy').innerText;
-
+      
       const currentQuantity = Number(quantity) + 1;
       totalCopy.innerText = currentQuantity;
+      
+      const numberText = copy.parentNode.parentNode.childNodes[5].childNodes[1].innerText;
+      
+      // console.log(numberText);
+      
+     
+      
+      navigator.clipboard.writeText(numberText)
+      
+
 
       alert("নম্বর কপি হয়েছে: ৯৯৯")
 
