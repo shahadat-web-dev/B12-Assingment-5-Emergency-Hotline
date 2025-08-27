@@ -30,7 +30,7 @@
 
       <div class="flex items-center gap-[20px]">
         <button class="flex items-center bg-[#41ff6b1a] py-3 px-7 rounded-[50px]"><span
-            class="mr-2 font-bold">0</span><img class="w-[25px] h-[25px]" src="./assets/heart.png" alt=""></button>
+            class="mr-2 font-bold" id="total-quantity">0</span><img class="w-[25px] h-[25px]" src="./assets/heart.png" alt=""></button>
 
         <button class="flex items-center bg-[#41ff6b1a] py-3 px-7 rounded-[50px] font-bold"><span
             class="mr-2">100</span><img class="w-[25px] h-[25px]" src="./assets/coin.png" alt=""></button>
@@ -69,8 +69,8 @@
                 <div class="bg-[#FFE3E2] p-3 rounded-xl">
                   <img class="w-[32px] " src="./assets/emergency.png" alt="">
                 </div>
-               
-                <button class="btn bg-white border-none"> <i class="fa-regular fa-heart"></i></button>
+
+                <button class="btn bg-white border-none hear-btn"> <i class="fa-regular fa-heart"></i></button>
               </div>
 
               <div class="mt-4">
@@ -88,7 +88,7 @@
               <div class="flex justify-between gap-3">
                 <button class="btn px-15"><i class="fa-regular fa-copy"></i> Copy</button>
 
-                <button class="btn px-15 bg-[#00A63E] text-white rounded-lg"><i class="fa-solid fa-phone"></i>
+                <button class="btn px-15 bg-[#00A63E] text-white rounded-lg cart-btn"><i class="fa-solid fa-phone"></i>
                   Call</button>
               </div>
             </div>
@@ -98,7 +98,7 @@
                 <div class="bg-[#FFE3E2] p-3 rounded-xl">
                   <img class="w-[32px] " src="./assets/police.png" alt="">
                 </div>
-                <button class="btn bg-white border-none"> <i class="fa-regular fa-heart"></i></button>
+                <button class="btn bg-white border-none hear-btn"> <i class="fa-regular fa-heart"></i></button>
               </div>
 
               <div class="mt-4">
@@ -116,7 +116,7 @@
               <div class="flex justify-between gap-3">
                 <button class="btn px-15"><i class="fa-regular fa-copy"></i> Copy</button>
 
-                <button class="btn px-15 bg-[#00A63E] text-white rounded-lg"><i class="fa-solid fa-phone"></i>
+                <button class="btn px-15 bg-[#00A63E] text-white rounded-lg cart-btn"><i class="fa-solid fa-phone"></i>
                   Call</button>
               </div>
             </div>
@@ -126,7 +126,7 @@
                 <div class="bg-[#FFE3E2] p-3 rounded-xl">
                   <img class="w-[32px] " src="./assets/fire-service.png" alt="">
                 </div>
-                <button class="btn bg-white border-none"> <i class="fa-regular fa-heart"></i></button>
+                <button class="btn bg-white border-none hear-btn"> <i class="fa-regular fa-heart"></i></button>
               </div>
 
               <div class="mt-4">
@@ -144,7 +144,7 @@
               <div class="flex justify-between gap-3">
                 <button class="btn px-15"><i class="fa-regular fa-copy"></i> Copy</button>
 
-                <button class="btn px-15 bg-[#00A63E] text-white rounded-lg"><i class="fa-solid fa-phone"></i>
+                <button class="btn px-15 bg-[#00A63E] text-white rounded-lg cart-btn"><i class="fa-solid fa-phone"></i>
                   Call</button>
               </div>
             </div>
@@ -154,7 +154,8 @@
 
         <!-- Call-History -->
         <aside id="call-history" class=" bg-white col-span-3 mt-12 my-20 p-6 shadow-md rounded-xl">
-          <div class="call-history-container">
+
+          <div id="call-history-container">
             <div class="flex justify-between items-center">
               <div>
                 <h3 class="text-xl font-medium"><i class="fa-regular fa-clock"></i> Call History</h3>
@@ -164,7 +165,14 @@
               </div>
             </div>
 
+            <!-- cart box -->
+            
+              
+
+            
+
           </div>
+
         </aside>
       </section>
     </section>
@@ -172,7 +180,7 @@
   </main>
 
 
-
+  <script src="./script/index.js"></script>
 </body>
 
 </html>
