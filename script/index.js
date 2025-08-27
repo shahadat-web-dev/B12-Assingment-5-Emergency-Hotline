@@ -1,9 +1,13 @@
-const cartBtns = document.getElementsByClassName('cart-btn')
+const cartBtns = document.getElementsByClassName('cart-btn');
 // console.log(cartBtns);
+
+
+
 
 for (let cartButton of cartBtns) {
    cartButton.addEventListener('click', function () {
       // console.log(cartButton);
+
 
       const serviceTitle = cartButton.parentNode.parentNode.childNodes[3].childNodes[1].innerText;
       // console.log(serviceTitle);
@@ -30,14 +34,65 @@ for (let cartButton of cartBtns) {
       callHistoryContainer.append(newCart);
 
 
+
+
+      const points = document.getElementById('point')
+
+
+      
+
+      let currentPoint = parseInt(points.innerText);
+      if (currentPoint > 0) {
+         alert("📞 Calling National Emergency Service 999....")
+         let totalPoints = currentPoint - 20;
+         points.innerText = totalPoints;
+      } else {
+          alert("❌ আপনার পর্যাপ্ত পয়েন্ট নেই। কল করতে কমপক্ষে ২০ কয়েন লাগবে |")
+      }
+
+      //   Points.innerText = totalPoint; 
+      //   console.log(totalPoint);
+
+
+
+
+
+
+
    });
 
 
 
 }
 
+// call width point 
+
+
+
+
+
+
+
+
+
+
+
+
+// clear history
+document.getElementById('btn-clear').addEventListener('click', function () {
+   const callHistoryContainer = document.getElementById('call-history-container');
+   callHistoryContainer.innerHTML = "";
+
+})
+
+
+
+
+
+
+
 // heart
-const totalQuantity = document.getElementById('total-quantity') ;
+const totalQuantity = document.getElementById('total-quantity');
 
 const heartButton = document.getElementsByClassName('hear-btn')
 
@@ -48,16 +103,34 @@ for (let herat of heartButton) {
       // console.log("heart button click");
       const quantity = document.getElementById('total-quantity').innerText;
 
-// console.log(quantity);
+      // console.log(quantity);
 
-const currentQuantity = Number(quantity) + 1;
-totalQuantity.innerText = currentQuantity;
+      const currentQuantity = Number(quantity) + 1;
+      totalQuantity.innerText = currentQuantity;
 
    });
 }
 
 
 // copy
+
+const totalCopy = document.getElementById('total-copy')
+
+const copyButton = document.getElementsByClassName('copy-btn');
+
+
+for (let copy of copyButton) {
+   copy.addEventListener('click', function () {
+      const quantity = document.getElementById('total-copy').innerText;
+
+      const currentQuantity = Number(quantity) + 1;
+      totalCopy.innerText = currentQuantity;
+
+      alert("নম্বর কপি হয়েছে: ৯৯৯")
+
+   })
+}
+
 
 
 
